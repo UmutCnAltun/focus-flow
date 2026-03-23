@@ -1,39 +1,51 @@
-# FocusFlow - Pomodoro Odaklanma Eklentisi
+# ⏳ FocusFlow: Pomodoro & Focus Assistant
 
-## Amaç
+FocusFlow, çalışma verimliliğinizi maksimize etmek için tasarlanmış, modern bir Chrome Tarayıcı Eklentisidir. Pomodoro tekniğini akıllı site engelleme özellikleriyle birleştirerek, odaklanma süreniz boyunca dikkat dağıtıcı unsurları (YouTube, Instagram, Twitter vb.) sizden uzak tutar.
 
-FocusFlow, Pomodoro tekniğini kullanarak kullanıcıların odaklanmasına yardımcı olan bir Chrome eklentisidir. Odaklanma süresi boyunca dikkat dağıtıcı web sitelerini (YouTube, Twitter, Instagram vb.) otomatik olarak engeller. Bu sayede kullanıcılar daha verimli çalışabilir ve dikkatlerini dağıtmaz.
+## 🚀 Öne Çıkan Özellikler
 
-## Özellikler
+Akıllı Pomodoro Zamanlayıcı: Klasik 25/5 kuralının yanı sıra, her 4. döngüde otomatik 15 dakikalık uzun mola sistemi.
 
-- **Pomodoro Timer**: 25 dakika odaklanma, 5 dakika kısa mola, her 4. pomodoro'da 15 dakika uzun mola.
-- **Özelleştirilebilir Süreler**: Kullanıcı ayarlarından odak, kısa mola ve uzun mola sürelerini değiştirebilir.
-- **Özelleştirilebilir Engellenen Siteler**: Kullanıcı kendi engellemek istediği siteleri ekleyebilir veya çıkarabilir. Varsayılan olarak YouTube, Twitter, Instagram, TikTok, Facebook, LinkedIn, Reddit, Pinterest ve Snapchat engellenir.
-- **İstatistikler**: Toplam pomodoro sayısı, toplam odak süresi ve engellenen girişimleri takip eder.
-- **Site Engelleme**: Odaklanma sırasında belirli sitelere erişimi engeller ve motive edici uyarı sayfası gösterir.
-- **Bildirimler**: Pomodoro tamamlandığında bildirim gönderir.
-- **Sekmeli Arayüz**: Timer, ayarlar, siteler ve istatistikler için ayrı sekmeler.
-- **Ayarlar Kaydetme**: Süreler ve siteler Chrome storage'da saklanır.
+* Dinamik Site Engelleyici: Odaklanma modundayken önceden belirlenen (veya sizin eklediğiniz) sitelere erişimi anında keser ve sizi motive edici bir karşılama sayfasıyla işinize geri döndürür.
 
-## Nasıl Çalışır
+* Tam Özelleştirme: Çalışma, kısa mola ve uzun mola sürelerini kendi ritminize göre ayarlayın.
 
-1. **Kurulum**: Eklentiyi Chrome'da yükleyin (chrome://extensions/ > Geliştirici modu açık > Paketlenmemiş uzantıyı yükle).
-2. **Kullanım**:
-   - Popup'ı açın.
-   - "Timer" sekmesinde "Başlat" butonuna tıklayın.
-   - Odaklanma süresi boyunca engellenen sitelere gittiğinizde uyarı sayfası görürsünüz.
-   - Süre dolunca otomatik olarak mola moduna geçer.
-3. **Ayarlar**: "Ayarlar" sekmesinden süreleri değiştirin ve kaydedin.
+* Kişisel Kara Liste: Hangi sitelerin dikkatinizi dağıttığına siz karar verin; listeye kolayca site ekleyip çıkarın.
 
-## Teknik Detaylar
+* Gelişmiş İstatistikler: Toplam odaklanma sürenizi ve engellenen "kaçamak" girişimlerinizi takip ederek gelişiminizi görün.
 
-- **Manifest V3**: Modern Chrome eklenti standardı.
-- **İzinler**: Storage (ayarlar için), Tabs/WebNavigation (site engelleme için), Notifications (bildirimler için).
-- **Dosyalar**:
-  - `background.js`: Site engelleme ve bildirim mantığı.
-  - `popup.html/popup.js`: Kullanıcı arayüzü ve timer.
-  - `blocked.html`: Engellenen sitelerde gösterilen sayfa.
-  - `styles.css`: Stil dosyası.
-  - `Readme.md`: Açıklama dosyası.
-## Geliştirme
-Kodları düzenledikten sonra eklentiyi yeniden yükleyin. Test için farklı sitelere gidin ve timer'ı çalıştırın.
+* Kesintisiz Senkronizasyon: Tüm ayarlarınız ve tercihleriniz Chrome Storage üzerinde güvenle saklanır.
+
+## 🛠️ Teknik Detaylar & Mimari
+
+Bu eklenti, en güncel tarayıcı standartları ve performans odaklı bir yapıyla geliştirilmiştir:
+
+* Manifest V3: Google Chrome'un en güncel ve güvenli eklenti standartı.
+
+* Chrome Storage API: Kullanıcı verilerinin ve ayarlarının lokalde kalıcı olarak saklanması.
+
+* Tabs & WebNavigation API: Gerçek zamanlı trafik izleme ve akıllı yönlendirme mantığı.
+
+* Vanilla JavaScript: Framework bağımlılığı olmadan, hızlı ve hafif çalışma performansı.
+
+## 📦 Kurulum (Geliştirici Modu)
+
+Eklentiyi tarayıcınıza eklemek için şu adımları izleyin:
+
+- Bu projeyi bilgisayarınıza indirin veya klonlayın.
+
+- Chrome tarayıcınızda chrome://extensions/ adresine gidin.
+
+- Sağ üst köşedeki "Geliştirici Modu" (Developer Mode) anahtarını aktif hale getirin.
+
+- "Paketlenmemiş öğe yükle" (Load unpacked) butonuna tıklayın ve projenin bulunduğu klasörü seçin.
+
+- FocusFlow artık tarayıcınızın eklentiler çubuğunda!
+
+🎯 Kullanım Senaryosu
+
+- Başlat: Popup menüsünden "Timer" sekmesine gelip "Başlat"a basın.
+
+- Odaklan: Sosyal medya sitelerine girmeye çalıştığınızda FocusFlow sizi durdurur.
+
+- Mola Ver: Süre bittiğinde gelen bildirimle arkanıza yaslanın ve dinlenin.
