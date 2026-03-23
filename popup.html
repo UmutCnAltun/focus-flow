@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>FocusFlow</h1>
+
+  <div class="tabs">
+    <button class="tab-button active" data-tab="timer"> Timer</button>
+    <button class="tab-button" data-tab="settings"> Ayarlar</button>
+    <button class="tab-button" data-tab="sites"> Siteler</button>
+    <button class="tab-button" data-tab="stats"> İstatistikler</button>
+  </div>
+
+  <div id="timer-tab" class="tab-content active">
+    <div id="timer">25:00</div>
+    <button id="start">Başlat</button>
+    <button id="stop">Durdur</button>
+    <p id="status">Odaklanma zamanı</p>
+  </div>
+
+  <div id="settings-tab" class="tab-content">
+    <h3>Ayarlar</h3>
+    <div class="settings-grid">
+      <label>Odak Süresi (dk):</label>
+      <input type="number" id="focusInput" value="25" min="1" max="60">
+      
+      <label>Kısa Mola (dk):</label>
+      <input type="number" id="shortBreakInput" value="5" min="1" max="30">
+      
+      <label>Uzun Mola (dk):</label>
+      <input type="number" id="longBreakInput" value="15" min="1" max="60">
+    </div>
+    <div class="settings-buttons">
+      <button id="saveSettings">Kaydet</button>
+      <button id="resetSettings">Varsayılanlara Sıfırla</button>
+    </div>
+    <p id="settingsMessage"></p>
+  </div>
+
+  <div id="sites-tab" class="tab-content">
+    <h3>Engellenen Siteler</h3>
+    <ul id="blockedSitesList"></ul>
+    <div class="site-input-row">
+      <input type="text" id="newSiteInput" placeholder="Yeni site ekle (örn: facebook.com)">
+      <button id="addSite">Ekle</button>
+    </div>
+    <p id="sitesMessage"></p>
+  </div>
+
+  <div id="stats-tab" class="tab-content">
+    <h3>İstatistikler</h3>
+    <p>Toplam Pomodoro: <span id="totalPomodoros">0</span></p>
+    <p>Toplam Odak Süresi: <span id="totalFocusTime">0</span> dakika</p>
+    <p>Engellenen Girişimler: <span id="blockedAttempts">0</span></p>
+    <button id="resetStats">İstatistikleri Sıfırla</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
